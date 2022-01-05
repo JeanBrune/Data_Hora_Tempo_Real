@@ -1,3 +1,21 @@
+// //PARA FUNÇÃO NATIVA DO JS
+// //criar data em tempo real
+// let data_nativa_js = setInterval(() => {
+//     tela.innerHTML = new Date().toLocaleDateString("pt-br", options) //formato regional, opções de exibição declaradas em variavel separada
+// }, 1000);
+
+// //formatar data criando um objeto separado para facilitar a leitura
+// let options = {
+//     dateStyle: "full",
+//     timeStyle: "full"
+// }
+
+// //selecionar onde exibir a data
+// let tela = document.querySelector("#data_hora")
+
+// //exibir na tela
+// tela.innerHTML = data_nativa_js()
+
 
 //PARA FORMATAR MANUALMENTE A HORA, EM TEMPO REAL
 //criar data
@@ -9,26 +27,12 @@ let data_nova = setInterval(
         return data_nova
     }, 1000);
 
-
-//selecionar onde exibir a data
+//identificar onde exibir na tela
 let tela = document.querySelector("#data_hora")
-//exibir data e hora na tela
-
-//tela.innerHTML = formatar()
-
-// function data() {
-//     setInterval(() => {
-//         let data_nova = new Date()
-//         console.log(data_nova)
-//     }, 1000);
-//     return data_nova(data_real)
-// }
-
-
 
 //criar função de identificar o dia da semana
 function dia_da_semana(dia_atual) {
-    const dias = ["Domingo", "Segunda", "Terça", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"]
+    const dias = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"]
     return dias[dia_atual]
 }
 
@@ -42,10 +46,11 @@ function mes_do_ano(mes_atual) {
 function zero_esquerda(numero) {
     return numero >= 10 ? numero : `0${numero}`
 }
+
 //criar função de formatar data
 function formatar(data_nova) {
     //extrair elementos
-        //data
+    //data
     let dia_atual = zero_esquerda(data_nova.getDate())
     console.log(dia_atual)
 
@@ -60,7 +65,7 @@ function formatar(data_nova) {
     console.log(mes_nome)
 
     let ano_atual = data_nova.getFullYear()
-        //hora
+    //hora
     let hora = zero_esquerda(data_nova.getHours())
     let min = zero_esquerda(data_nova.getMinutes())
     let seg = zero_esquerda(data_nova.getSeconds())
@@ -69,10 +74,6 @@ function formatar(data_nova) {
     //exibir na tela
     tela.innerHTML = `${dia_semana}, ${dia_atual} de ${mes_nome} de ${ano_atual}, <br> ${hora}:${min}:${seg} (horário local)`
 }
-
-
-
-
 
 
 
