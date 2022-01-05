@@ -1,18 +1,24 @@
-body{
+body {
     background-color: rgb(76, 76, 107);
 }
 
-section{
+section {
     background-color: rgb(228, 225, 225);
     box-shadow: 2px 2px 10px 1px black;
     border-radius: 20px;
     width: 600px;
     margin: 20px auto;
     padding: 20px;
-    min-width: 300px;
 }
 
-#titulo{
+@media (max-width: 767.98px) {
+    section {
+        width: 80%;
+        min-width: 300px;
+    }
+}
+
+#titulo {
     font-weight: bold;
     font-size: 300%;
     text-align: center;
@@ -20,15 +26,32 @@ section{
     width: 100%;
 }
 
-#data_hora{
+#data_hora {
     font-size: 200%;
     font-weight: bold;
     text-align: center;
     width: 100%;
+    margin: 5px;
 }
 
-.icon{
+@media (max-width: 604px) {
+    #data_hora {
+        font-size: 150%;
+    }
+    #titulo{
+        font-size: 200%;
+    }
+}
+
+@media(max-width: 350px ){
+    #imagem_area{
+        width: 50%;
+        min-width: 300px;
+        margin: 17px
+    }
+}
+
+.icon {
     display: block;
     margin: 0px auto;
-    
 }
