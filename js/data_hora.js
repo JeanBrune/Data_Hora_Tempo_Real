@@ -67,7 +67,7 @@ function formatar(data_nova) {
     console.log(seg)
 
     //exibir na tela
-    tela.innerHTML = `${dia_semana}, ${dia_atual} de ${mes_nome} de ${ano_atual}, <br> ${hora}:${min}:${seg} (horário de Brasilha)`
+    tela.innerHTML = `${dia_semana}, ${dia_atual} de ${mes_nome} de ${ano_atual}, <br> ${hora}:${min}:${seg} (horário local)`
 }
 
 
